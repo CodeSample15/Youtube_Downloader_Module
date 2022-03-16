@@ -1,2 +1,3 @@
 # Youtube_Downloader_Module
- Uses youtube_dl to download youtube videos through cli
+ Uses yt-dlp to download youtube videos through cli
+ Worse version of yt-dlp to specifically download just audio

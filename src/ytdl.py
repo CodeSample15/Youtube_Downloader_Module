@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-import youtube_dl
+import yt_dlp
 import sys
 import os
 
@@ -14,7 +14,7 @@ def download(format='wav', link=''):
         }],
     }
 
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([link])
 
 #making sure there are enough system arguments to run the program

@@ -4,12 +4,14 @@ import sys
 import os
 
 def download(format='wav', link=''):
+    fileType = format.replace('.','') #remove . from the beginning of the format just in case the user entered the format with a dot
+
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': str(os.path.expanduser('~')) + '/Downloads/%(title)s-%(id)s.%(ext)s',
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
-            'preferredcodec': sys.argv[2],
+            'preferredcodec': fileType,
             'preferredquality': '192',
         }],
     }
